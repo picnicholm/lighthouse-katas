@@ -12,6 +12,11 @@ const conditionalSum = (values, condition) => {
   return sum;
 };
 
+const conditionalSum = (values, condition) =>
+  values
+    .filter((val) => val % 2 === 0 && condition === "even")
+    .reduce((a, b) => a + b, 0);
+
 console.log(conditionalSum([1, 2, 3, 4, 5], "even"));
 console.log(conditionalSum([1, 2, 3, 4, 5], "odd"));
 console.log(conditionalSum([13, 88, 12, 44, 99], "even"));
